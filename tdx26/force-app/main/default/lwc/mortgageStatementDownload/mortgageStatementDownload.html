@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Download Mortgage Payment History">
+        <div class="slds-p-around_medium">
+            <lightning-button
+                label={buttonLabel}
+                variant="brand"
+                onclick={handleDownload}
+                disabled={isLoading}>
+            </lightning-button>
+
+            <template if:true={errorMessage}>
+                <p class="slds-text-color_error slds-m-top_small">{errorMessage}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
